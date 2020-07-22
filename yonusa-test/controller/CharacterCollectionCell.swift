@@ -18,7 +18,7 @@ class CharacterCollectionCell: UICollectionViewCell {
         characterNameLabel.text = name
     }
     func loadImage(_ image: String) {
-        let imgurl = image.
+        let img = image.split(separator: "?")
         if let urlSafe = image.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed) {
             if let url = URL(string: urlSafe) {
                 

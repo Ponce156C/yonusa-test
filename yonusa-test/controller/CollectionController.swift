@@ -9,7 +9,7 @@
 import UIKit
 import Alamofire
 
-class CollectionController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class CollectionController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     @IBOutlet weak var simpsonsCollection: UICollectionView!
     
@@ -69,13 +69,14 @@ class CollectionController: UIViewController, UICollectionViewDelegate, UICollec
         self.simpsonsCollection.reloadData()
     }
     
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return charactersSimpsons.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "character", for: indexPath) as! CharacterCollectionCell
-        cell.loadImage(charactersSimpsons[indexPath.row].image!)
+        cell.loadImage("https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1280px-Image_created_with_a_mobile_phone.png")
         cell.printName(charactersSimpsons[indexPath.row].character!)
         return cell
     }
