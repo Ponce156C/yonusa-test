@@ -13,19 +13,12 @@ class CharacterCollectionCell: UICollectionViewCell {
     
     @IBOutlet weak var characterImageView: UIImageView!
     @IBOutlet weak var characterNameLabel: UILabel!
+    @IBOutlet weak var characterButton: UIButton!
     
     func printName(_ name: String) {
         characterNameLabel.text = name
     }
-    func loadImage(_ image: String) {
-        let img = image.split(separator: "?")
-        if let urlSafe = image.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed) {
-            if let url = URL(string: urlSafe) {
-                
-                Nuke.loadImage(with: url, into: characterImageView)
-            }
-        }
-    }
+    
     override func draw(_ rect: CGRect) {
         characterImageView.layer.cornerRadius = characterImageView.frame.height/2
     }
