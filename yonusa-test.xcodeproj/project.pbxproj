@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,10 @@
 		75D71A9524C87FCE000E1EC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75D71A9324C87FCE000E1EC9 /* Main.storyboard */; };
 		75D71A9724C87FD1000E1EC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75D71A9624C87FD1000E1EC9 /* Assets.xcassets */; };
 		75D71A9A24C87FD1000E1EC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75D71A9824C87FD1000E1EC9 /* LaunchScreen.storyboard */; };
+		75D71AA624C88E31000E1EC9 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 75D71AA524C88E31000E1EC9 /* Alamofire */; };
+		75D71AA824C88ED7000E1EC9 /* CharacterStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D71AA724C88ED7000E1EC9 /* CharacterStruct.swift */; };
+		75D71AAC24C89E46000E1EC9 /* CharacterCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D71AAB24C89E46000E1EC9 /* CharacterCollectionCell.swift */; };
+		75D71AAF24C8A041000E1EC9 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 75D71AAE24C8A041000E1EC9 /* Nuke */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,8 @@
 		75D71A9624C87FD1000E1EC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		75D71A9924C87FD1000E1EC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		75D71A9B24C87FD1000E1EC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		75D71AA724C88ED7000E1EC9 /* CharacterStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterStruct.swift; sourceTree = "<group>"; };
+		75D71AAB24C89E46000E1EC9 /* CharacterCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCollectionCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +37,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75D71AA624C88E31000E1EC9 /* Alamofire in Frameworks */,
+				75D71AAF24C8A041000E1EC9 /* Nuke in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +79,7 @@
 				75D71A8D24C87FCE000E1EC9 /* AppDelegate.swift */,
 				75D71A8F24C87FCE000E1EC9 /* SceneDelegate.swift */,
 				75D71A9124C87FCE000E1EC9 /* CollectionController.swift */,
+				75D71AAB24C89E46000E1EC9 /* CharacterCollectionCell.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -78,6 +87,7 @@
 		75D71AA224C88396000E1EC9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				75D71AA724C88ED7000E1EC9 /* CharacterStruct.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -107,6 +117,10 @@
 			dependencies = (
 			);
 			name = "yonusa-test";
+			packageProductDependencies = (
+				75D71AA524C88E31000E1EC9 /* Alamofire */,
+				75D71AAE24C8A041000E1EC9 /* Nuke */,
+			);
 			productName = "yonusa-test";
 			productReference = 75D71A8A24C87FCE000E1EC9 /* yonusa-test.app */;
 			productType = "com.apple.product-type.application";
@@ -135,6 +149,10 @@
 				Base,
 			);
 			mainGroup = 75D71A8124C87FCE000E1EC9;
+			packageReferences = (
+				75D71AA424C88E31000E1EC9 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				75D71AAD24C8A041000E1EC9 /* XCRemoteSwiftPackageReference "Nuke" */,
+			);
 			productRefGroup = 75D71A8B24C87FCE000E1EC9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -163,6 +181,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				75D71A9224C87FCE000E1EC9 /* CollectionController.swift in Sources */,
+				75D71AA824C88ED7000E1EC9 /* CharacterStruct.swift in Sources */,
+				75D71AAC24C89E46000E1EC9 /* CharacterCollectionCell.swift in Sources */,
 				75D71A8E24C87FCE000E1EC9 /* AppDelegate.swift in Sources */,
 				75D71A9024C87FCE000E1EC9 /* SceneDelegate.swift in Sources */,
 			);
@@ -362,6 +382,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		75D71AA424C88E31000E1EC9 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.2.2;
+			};
+		};
+		75D71AAD24C8A041000E1EC9 /* XCRemoteSwiftPackageReference "Nuke" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/Nuke";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		75D71AA524C88E31000E1EC9 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 75D71AA424C88E31000E1EC9 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		75D71AAE24C8A041000E1EC9 /* Nuke */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 75D71AAD24C8A041000E1EC9 /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = Nuke;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 75D71A8224C87FCE000E1EC9 /* Project object */;
 }
